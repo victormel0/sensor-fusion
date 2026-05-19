@@ -1,0 +1,82 @@
+# Sensor recordings (huge, regenerable)
+recordings/
+*.bag
+*.db3
+*.mcap
+
+# Preprocessed bag outputs from direct_visual_lidar_calibration
+# (regenerable from the source bag)
+*_preprocessed/
+
+
+# ROS 2 build artefacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/src/install/
+ros2_ws/src/log/
+ros2_ws/log/
+
+
+# Model weights, exported models, TensorRT engines (large binaries)
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.engine
+*.plan
+*.trt
+*.h5
+weights/
+models/cache/
+
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+
+# CMake / C++ artefacts (anything outside ros2_ws/build/)
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.o
+*.so.*
+
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+
+# Secrets and local env files (don't commit credentials)
+.env
+.env.local
+*.key
+*.pem
+
+
+# Misc
+*.bak
+*.orig
+*.log
+htmlcov/
+.coverage
