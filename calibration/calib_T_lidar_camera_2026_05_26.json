@@ -1,0 +1,55 @@
+{
+  "camera": {
+    "camera_model": "rational_polynomial",
+    "distortion_coeffs": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "intrinsics": [
+      335.125732421875,
+      359.345703125,
+      486.26446533203125,
+      291.699951171875
+    ]
+  },
+  "meta": {
+    "bag_names": [
+      "bag_01",
+      "bag_02",
+      "bag_03",
+      "bag_04",
+      "bag_05"
+    ],
+    "camera_info_topic": "/zed/zed_node/rgb/color/rect/camera_info",
+    "data_path": "/home/user/Documents/workspace/sensor-fusion/recordings/calib_set_2026_05_25",
+    "image_topic": "/zed/zed_node/rgb/color/rect/image",
+    "intensity_channel": "intensity",
+    "points_topic": "/rslidar_points"
+  },
+  "results": {
+    "T_lidar_camera": [
+      0.12277839885864544,
+      -0.014699610828586536,
+      -0.15988210396975178,
+      -0.4968608973588679,
+      0.5101250790738915,
+      -0.5005822196984645,
+      0.4922591732993449
+    ],
+    "init_T_lidar_camera": [
+      0.10977118462324142,
+      -0.04465482756495476,
+      -0.11827034503221512,
+      0.5047600661968608,
+      -0.5045182025345762,
+      0.5012573981738387,
+      -0.4893052714061721
+    ]
+  }
+}

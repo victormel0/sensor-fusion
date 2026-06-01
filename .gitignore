@@ -4,10 +4,14 @@ recordings/
 *.db3
 *.mcap
 
+# Calibration tool
+ros2_ws/src/direct_visual_lidar_calibration/
 # Preprocessed bag outputs from direct_visual_lidar_calibration
 # (regenerable from the source bag)
 *_preprocessed/
 
+# bag_to_bin output
+code/bag_to_bin/out/
 
 # ROS 2 build artefacts
 ros2_ws/build/
@@ -43,6 +47,7 @@ __pycache__/
 .venv/
 venv/
 env/
+venv_openpcdet/
 
 
 # CMake / C++ artefacts (anything outside ros2_ws/build/)
@@ -80,3 +85,10 @@ Thumbs.db
 *.log
 htmlcov/
 .coverage
+
+# Large generated/external (already noted)
+recordings/
+third_party/
+
+# GUI state
+imgui.ini
