@@ -4,14 +4,15 @@ recordings/
 *.db3
 *.mcap
 
-# Calibration tool
-ros2_ws/src/direct_visual_lidar_calibration/
 # Preprocessed bag outputs from direct_visual_lidar_calibration
 # (regenerable from the source bag)
 *_preprocessed/
 
 # bag_to_bin output
 code/bag_to_bin/out/
+# regenerable fusion outputs
+code/fusion/frames_out/
+code/fusion/yolo_out/
 
 # ROS 2 build artefacts
 ros2_ws/build/
@@ -19,7 +20,12 @@ ros2_ws/install/
 ros2_ws/src/install/
 ros2_ws/src/log/
 ros2_ws/log/
-
+# third-party ROS driver clones
+ros2_ws/src/direct_visual_lidar_calibration/
+ros2_ws/src/rslidar_msg/
+ros2_ws/src/rslidar_sdk/
+ros2_ws/src/vision_opencv/
+ros2_ws/src/zed-ros2-wrapper/
 
 # Model weights, exported models, TensorRT engines (large binaries)
 *.pth
@@ -48,6 +54,7 @@ __pycache__/
 venv/
 env/
 venv_openpcdet/
+venv_yolo/
 
 
 # CMake / C++ artefacts (anything outside ros2_ws/build/)
