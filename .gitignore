@@ -11,7 +11,9 @@ recordings/
 # bag_to_bin output
 code/bag_to_bin/out/
 # regenerable fusion outputs
+code/fusion/d20_live_out/
 code/fusion/frames_out/
+code/fusion/fused_out/
 code/fusion/yolo_out/
 
 # ROS 2 build artefacts
