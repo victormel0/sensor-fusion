@@ -1,0 +1,83 @@
+{
+  "frame": "00300",
+  "image": "00300.png",
+  "image_size": [
+    960,
+    600
+  ],
+  "created": "2026-06-17T07:52:54",
+  "objects": [
+    {
+      "class": "box",
+      "bbox_2d": [
+        735,
+        349,
+        853,
+        441
+      ],
+      "range_m_tape": 1.93,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "bottle",
+      "bbox_2d": [
+        673,
+        390,
+        701,
+        474
+      ],
+      "range_m_tape": 1.36,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "trash bin",
+      "bbox_2d": [
+        360,
+        376,
+        436,
+        470
+      ],
+      "range_m_tape": 1.22,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "chair1",
+      "bbox_2d": [
+        441,
+        219,
+        528,
+        400
+      ],
+      "range_m_tape": 1.9,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "chair2",
+      "bbox_2d": [
+        533,
+        254,
+        577,
+        344
+      ],
+      "range_m_tape": 4.08,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "potted plant",
+      "bbox_2d": [
+        619,
+        235,
+        653,
+        321
+      ],
+      "range_m_tape": 7.74,
+      "occluded": false,
+      "notes": ""
+    }
+  ]
+}

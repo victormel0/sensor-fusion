@@ -1,0 +1,48 @@
+env,arm,gt_class,gt_range,det_range,signed_err,abs_err,source
+env1,fused,chair,1.36,1.762,0.402,0.402,fused
+env1,fused,tv,2.3,2.354,0.054,0.054,fused
+env1,fused,tv,1.9,2.01,0.11,0.11,fused
+env1,fused,person,4.22,4.465,0.245,0.245,fused
+env1,fused,tv,2.3,2.352,0.052,0.052,fused
+env1,fused,tv,1.9,2.01,0.11,0.11,fused
+env1,fused,chair,1.36,1.76,0.4,0.4,fused
+env1,fused,person,4.22,4.312,0.092,0.092,fused
+env1,fused,chair,1.36,1.762,0.402,0.402,fused
+env1,fused,tv,1.9,2.011,0.111,0.111,fused
+env1,fused,tv,2.3,2.354,0.054,0.054,fused
+env1,fused,person,4.22,4.314,0.094,0.094,fused
+env1,lidar_only,chair,1.36,0.953,-0.407,0.407,lidar_only
+env1,lidar_only,person,4.22,4.454,0.234,0.234,lidar_only
+env1,lidar_only,chair,1.36,1.251,-0.109,0.109,lidar_only
+env1,lidar_only,person,4.22,4.335,0.115,0.115,lidar_only
+env1,lidar_only,chair,1.36,1.028,-0.332,0.332,lidar_only
+env1,lidar_only,person,4.22,4.33,0.11,0.11,lidar_only
+env2,fused,chair,1.9,1.631,-0.269,0.269,fused
+env2,fused,potted plant,7.74,8.07,0.33,0.33,fused
+env2,fused,chair,1.9,1.625,-0.275,0.275,fused
+env2,fused,potted plant,7.74,8.068,0.328,0.328,fused
+env2,fused,chair,1.9,1.628,-0.272,0.272,fused
+env2,fused,potted plant,7.74,8.062,0.322,0.322,fused
+env2,fused,chair,1.9,1.627,-0.273,0.273,fused
+env2,fused,potted plant,7.74,8.066,0.326,0.326,fused
+env2,fused,chair,1.9,1.631,-0.269,0.269,fused
+env2,fused,potted plant,7.74,8.062,0.322,0.322,fused
+env2,fused,bottle,0.94,1.324,0.384,0.384,fused
+env2,fused,bottle,0.94,1.318,0.378,0.378,fused
+env2,fused,bottle,0.94,1.325,0.385,0.385,fused
+env2,fused,trash bin,1.32,1.504,0.184,0.184,fused
+env2,fused,bottle,0.94,1.323,0.383,0.383,fused
+env2,fused,bottle,0.94,1.324,0.384,0.384,fused
+env2,fused,trash bin,1.32,1.51,0.19,0.19,fused
+env2,fused,bottle,0.94,1.322,0.382,0.382,fused
+env2,fused,box,1.6,1.191,-0.409,0.409,fused
+env2,fused,chair,1.42,1.677,0.257,0.257,fused
+env2,fused,box,1.6,1.89,0.29,0.29,fused
+env2,fused,chair,3.61,4.126,0.516,0.516,fused
+env2,fused,chair,1.42,1.679,0.259,0.259,fused
+env2,fused,chair,1.42,1.676,0.256,0.256,fused
+env2,fused,box,1.6,1.196,-0.404,0.404,fused
+env2,fused,chair,1.42,1.676,0.256,0.256,fused
+env2,fused,chair,3.61,4.127,0.517,0.517,fused
+env2,fused,chair,1.42,1.678,0.258,0.258,fused
+env2,fused,chair,1.42,1.677,0.257,0.257,fused

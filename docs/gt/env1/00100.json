@@ -1,0 +1,59 @@
+{
+  "frame": "00100",
+  "image": "00100.png",
+  "image_size": [
+    960,
+    600
+  ],
+  "created": "2026-06-15T23:04:34",
+  "objects": [
+    {
+      "class": "chair",
+      "bbox_2d": [
+        600,
+        190,
+        828,
+        510
+      ],
+      "range_m_tape": 1.36,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "person-in-chair",
+      "bbox_2d": [
+        442,
+        255,
+        494,
+        359
+      ],
+      "range_m_tape": 4.22,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "right monitor",
+      "bbox_2d": [
+        194,
+        186,
+        313,
+        273
+      ],
+      "range_m_tape": 1.9,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "left monitor",
+      "bbox_2d": [
+        61,
+        189,
+        196,
+        268
+      ],
+      "range_m_tape": 2.3,
+      "occluded": false,
+      "notes": ""
+    }
+  ]
+}

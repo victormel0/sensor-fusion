@@ -4,7 +4,11 @@ extract_frames.py -- extract time-synchronized (LiDAR cloud, RGB image) pairs fr
 for offline frustum fusion.
 
 Run in the ROS 2 environment (NOT venv_openpcdet / venv_yolo). Needs: rosbag2_py, rclpy,
-sensor_msgs, sensor_msgs_py, cv_bridge (the source-built vision_opencv overlay), cv2, numpy.
+sensor_msgs, sensor_msgs_py, cv2, numpy. NOTE: cv_bridge is NO LONGER required (see the
+"Image decode" region) -- the image is decoded directly from the message buffer so the script
+does not depend on the numpy-1.x-compiled cv_bridge_boost extension, which fails to import under
+numpy 2.x with "AttributeError: _ARRAY_API not found". The only OpenCV use left is cv2.imwrite,
+verified working under the ROS-env cv2 4.13.0 + numpy 2.2.6 on this box (d24).
 
 For each selected LiDAR frame (by message index; default the Day-6 PointPillars baseline frames
 via --frames, or every Nth via --stride), it writes:
@@ -35,7 +39,6 @@ import rclpy.serialization
 import rosbag2_py
 from sensor_msgs.msg import Image, PointCloud2
 from sensor_msgs_py import point_cloud2
-from cv_bridge import CvBridge
 import cv2
 #endregion
 
@@ -63,21 +66,75 @@ def iter_topic(bag_path, topic):
 #endregion
 
 
+#region [Image decode (cv_bridge-free)]
+# sensor_msgs/Image -> BGR uint8 ndarray, driven by msg.encoding. This replaces
+# cv_bridge.imgmsg_to_cv2 so the script does not import cv_bridge_boost (compiled against
+# numpy 1.x, broken under numpy 2.x). Only 8-bit colour/mono encodings are handled, which is
+# all the ZED rect colour stream publishes; a clear error is raised for anything else rather
+# than silently mis-decoding.
+_CHANNELS = {
+    "bgra8": 4,
+    "rgba8": 4,
+    "bgr8": 3,
+    "rgb8": 3,
+    "mono8": 1,
+}
+
+
+def imgmsg_to_bgr(msg):
+    enc = msg.encoding.lower()
+    if enc not in _CHANNELS:
+        raise ValueError(
+            f"unsupported image encoding '{msg.encoding}'. Supported: {sorted(_CHANNELS)}. "
+            "Add a case to _CHANNELS / imgmsg_to_bgr if the camera publishes a different "
+            "8-bit encoding (do not guess -- check the topic's actual encoding first)."
+        )
+    nch = _CHANNELS[enc]
+    buf = np.frombuffer(msg.data, dtype=np.uint8)
+    # reshape using step (row stride in bytes) to account for any row padding, then slice the
+    # actual pixel columns
+    buf = buf.reshape(msg.height, msg.step)
+    img = buf[:, : msg.width * nch].reshape(msg.height, msg.width, nch)
+    if enc == "bgra8":
+        return img[:, :, :3].copy()            # B,G,R,A -> B,G,R
+    if enc == "rgba8":
+        return img[:, :, 2::-1].copy()         # R,G,B,A -> B,G,R
+    if enc == "bgr8":
+        return img.copy()
+    if enc == "rgb8":
+        return img[:, :, ::-1].copy()          # R,G,B -> B,G,R
+    # mono8
+    return np.repeat(img, 3, axis=2).copy()    # gray -> 3-channel BGR
+#endregion
+
+
 #region [Helpers]
 def stamp_ns(header):
     return int(header.stamp.sec) * 1_000_000_000 + int(header.stamp.nanosec)
 
 
 def cloud_to_bin_array(cloud_msg):
-    """5-channel float32 [x, y, z, intensity, 0]; matches the nuScenes layout bag_to_bin.py uses."""
-    rows = point_cloud2.read_points(
+    """5-channel float32 [x, y, z, intensity, 0]; matches the nuScenes layout bag_to_bin.py uses.
+
+    Handles both the structured-ndarray return of sensor_msgs_py.read_points (Humble, and the
+    only path that works cleanly under numpy 2.x) and the older tuple-iterable return.
+    """
+    pts = point_cloud2.read_points(
         cloud_msg, field_names=("x", "y", "z", "intensity"), skip_nans=True
     )
-    pts = np.array([[r[0], r[1], r[2], r[3]] for r in rows], dtype=np.float32)
-    if pts.shape[0] == 0:
-        return pts.reshape(-1, 5)
-    time_col = np.zeros((pts.shape[0], 1), dtype=np.float32)
-    return np.hstack([pts, time_col]).astype(np.float32)
+    if isinstance(pts, np.ndarray) and pts.dtype.names is not None:
+        n = pts.shape[0]
+        out = np.zeros((n, 5), dtype=np.float32)
+        out[:, 0] = pts["x"]
+        out[:, 1] = pts["y"]
+        out[:, 2] = pts["z"]
+        out[:, 3] = pts["intensity"]
+        return out
+    arr = np.array([[r[0], r[1], r[2], r[3]] for r in pts], dtype=np.float32)
+    if arr.shape[0] == 0:
+        return arr.reshape(-1, 5)
+    time_col = np.zeros((arr.shape[0], 1), dtype=np.float32)
+    return np.hstack([arr, time_col]).astype(np.float32)
 #endregion
 
 
@@ -95,7 +152,6 @@ def main():
     args = parser.parse_args()
 
     os.makedirs(args.out, exist_ok=True)
-    bridge = CvBridge()
 
     # Pass 1: pick the selected LiDAR frames; keep only their stamps (and clouds if --write-bin).
     wanted = set(int(x) for x in args.frames.split(",")) if args.frames.strip() else None
@@ -124,7 +180,7 @@ def main():
             dt = abs(i_ns - rec["l_ns"]) / 1e6
             if dt < rec["best_dt"]:
                 rec["best_dt"] = dt
-                rec["img"] = bridge.imgmsg_to_cv2(img_msg, desired_encoding="bgr8")
+                rec["img"] = imgmsg_to_bgr(img_msg)
                 rec["img_ns"] = i_ns
 
     # Write outputs.
