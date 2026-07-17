@@ -1,0 +1,31 @@
+env,arm,gt_class,gt_range,det_range,signed_err,abs_err,source
+unknown,fused,bottle,1.18,1.397,0.217,0.217,fused
+unknown,fused,trash bin,2.93,3.063,0.133,0.133,fused
+unknown,fused,chair,1.79,2.12,0.33,0.33,fused
+unknown,fused,chair,3.8,4.413,0.613,0.613,fused
+unknown,fused,tv,5.91,5.986,0.076,0.076,fused
+unknown,fused,potted plant,7.83,2.218,-5.612,5.612,fused
+unknown,fused,bottle,1.18,1.4,0.22,0.22,fused
+unknown,fused,chair,1.79,2.12,0.33,0.33,fused
+unknown,fused,trash bin,2.93,3.066,0.136,0.136,fused
+unknown,fused,potted plant,7.83,2.219,-5.611,5.611,fused
+unknown,fused,tv,5.91,5.986,0.076,0.076,fused
+unknown,fused,chair,3.8,4.414,0.614,0.614,fused
+unknown,fused,bottle,1.18,1.395,0.215,0.215,fused
+unknown,fused,trash bin,2.93,3.065,0.135,0.135,fused
+unknown,fused,chair,1.79,2.118,0.328,0.328,fused
+unknown,fused,chair,3.8,4.408,0.608,0.608,fused
+unknown,fused,tv,5.91,5.986,0.076,0.076,fused
+unknown,fused,potted plant,7.83,2.22,-5.61,5.61,fused
+unknown,fused,bottle,1.18,1.398,0.218,0.218,fused
+unknown,fused,trash bin,2.93,3.01,0.08,0.08,fused
+unknown,fused,chair,1.79,2.121,0.331,0.331,fused
+unknown,fused,chair,3.8,4.41,0.61,0.61,fused
+unknown,fused,tv,5.91,5.986,0.076,0.076,fused
+unknown,fused,potted plant,7.83,2.218,-5.612,5.612,fused
+unknown,fused,bottle,1.18,1.395,0.215,0.215,fused
+unknown,fused,trash bin,2.93,3.065,0.135,0.135,fused
+unknown,fused,chair,1.79,2.118,0.328,0.328,fused
+unknown,fused,tv,5.91,5.986,0.076,0.076,fused
+unknown,fused,chair,3.8,4.409,0.609,0.609,fused
+unknown,fused,potted plant,7.83,2.219,-5.611,5.611,fused

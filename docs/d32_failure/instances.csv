@@ -1,0 +1,109 @@
+env,pose,frame,gt_class_raw,gt_canon,gt_range_m,bucket,pred_class,pred_conf,match_iou,det_source
+env1,-,00100,chair,chair,1.36,TP_correct_class,chair,0.943,0.95,fused
+env1,-,00100,person-in-chair,person,4.22,TP_correct_class,person,0.319,0.846,fused
+env1,-,00100,right monitor,tv,1.9,TP_correct_class,tv,0.828,0.933,fused
+env1,-,00100,left monitor,tv,2.3,TP_correct_class,tv,0.844,0.937,fused
+env1,-,00300,chair,chair,1.36,TP_correct_class,chair,0.948,0.944,fused
+env1,-,00300,person-in-chair,person,4.22,TP_correct_class,person,0.549,0.857,fused
+env1,-,00300,right monitor,tv,1.9,TP_correct_class,tv,0.702,0.96,fused
+env1,-,00300,left monitor,tv,2.3,TP_correct_class,tv,0.815,0.977,fused
+env1,-,00500,chair,chair,1.36,TP_correct_class,chair,0.941,0.959,fused
+env1,-,00500,person-in-chair,person,4.22,TP_correct_class,person,0.282,0.854,fused
+env1,-,00500,right monitor,tv,1.9,TP_correct_class,tv,0.791,0.946,fused
+env1,-,00500,left monitor,tv,2.3,TP_correct_class,tv,0.83,0.942,fused
+env2,pose1,00100,box,box,1.93,FN,,,,
+env2,pose1,00100,bottle,bottle,1.36,FN,,,,
+env2,pose1,00100,trash bin,trash bin,1.22,FN,,,,
+env2,pose1,00100,chair1,chair,1.9,TP_correct_class,chair,0.656,0.903,fused
+env2,pose1,00100,chair2,chair,4.08,FN,,,,
+env2,pose1,00100,potted plant,potted plant,7.74,TP_correct_class,potted plant,0.468,0.526,fused
+env2,pose1,00200,box,box,1.93,FN,,,,
+env2,pose1,00200,bottle,bottle,1.36,FN,,,,
+env2,pose1,00200,trash bin,trash bin,1.22,FN,,,,
+env2,pose1,00200,chair1,chair,1.9,TP_correct_class,chair,0.582,0.894,fused
+env2,pose1,00200,chair2,chair,4.08,FN,,,,
+env2,pose1,00200,potted plant,potted plant,7.74,TP_correct_class,potted plant,0.402,0.53,fused
+env2,pose1,00300,box,box,1.93,FN,,,,
+env2,pose1,00300,bottle,bottle,1.36,FN,,,,
+env2,pose1,00300,trash bin,trash bin,1.22,FN,,,,
+env2,pose1,00300,chair1,chair,1.9,TP_correct_class,chair,0.59,0.927,fused
+env2,pose1,00300,chair2,chair,4.08,FN,,,,
+env2,pose1,00300,potted plant,potted plant,7.74,TP_correct_class,potted plant,0.382,0.529,fused
+env2,pose1,00400,box,box,1.93,FN,,,,
+env2,pose1,00400,bottle,bottle,1.36,FN,,,,
+env2,pose1,00400,trash bin,trash bin,1.22,FN,,,,
+env2,pose1,00400,chair1,chair,1.9,TP_correct_class,chair,0.625,0.867,fused
+env2,pose1,00400,chair2,chair,4.08,FN,,,,
+env2,pose1,00400,potted plant,potted plant,7.74,TP_correct_class,potted plant,0.458,0.525,fused
+env2,pose1,00500,box,box,1.93,FN,,,,
+env2,pose1,00500,bottle,bottle,1.36,FN,,,,
+env2,pose1,00500,trash bin,trash bin,1.22,FN,,,,
+env2,pose1,00500,chair1,chair,1.9,TP_correct_class,chair,0.684,0.805,fused
+env2,pose1,00500,chair2,chair,4.08,FN,,,,
+env2,pose1,00500,potted plant,potted plant,7.74,TP_correct_class,potted plant,0.502,0.549,fused
+env2,pose2,00100,box,box,1.4,FN,,,,
+env2,pose2,00100,bottle,bottle,0.94,TP_correct_class,bottle,0.547,0.795,fused
+env2,pose2,00100,trash bin,trash bin,1.32,FN,,,,
+env2,pose2,00100,chair1,chair,1.75,FN,,,,
+env2,pose2,00100,chair2,chair,3.74,FN,,,,
+env2,pose2,00200,box,box,1.4,FN,,,,
+env2,pose2,00200,bottle,bottle,0.94,TP_correct_class,bottle,0.564,0.782,fused
+env2,pose2,00200,trash bin,trash bin,1.32,FN,,,,
+env2,pose2,00200,chair1,chair,1.75,FN,,,,
+env2,pose2,00200,chair2,chair,3.74,FN,,,,
+env2,pose2,00300,box,box,1.4,FN,,,,
+env2,pose2,00300,bottle,bottle,0.94,TP_correct_class,bottle,0.479,0.882,fused
+env2,pose2,00300,trash bin,trash bin,1.32,FN,,,,
+env2,pose2,00300,chair1,chair,1.75,FN,,,,
+env2,pose2,00300,chair2,chair,3.74,FN,,,,
+env2,pose2,00400,box,box,1.4,FN,,,,
+env2,pose2,00400,bottle,bottle,0.94,TP_correct_class,bottle,0.547,0.794,fused
+env2,pose2,00400,trash bin,trash bin,1.32,TP_wrong_class,potted plant,0.458,0.859,fused
+env2,pose2,00400,chair1,chair,1.75,FN,,,,
+env2,pose2,00400,chair2,chair,3.74,FN,,,,
+env2,pose2,00500,box,box,1.4,FN,,,,
+env2,pose2,00500,bottle,bottle,0.94,TP_correct_class,bottle,0.545,0.785,fused
+env2,pose2,00500,trash bin,trash bin,1.32,FN,,,,
+env2,pose2,00500,chair1,chair,1.75,FN,,,,
+env2,pose2,00500,chair2,chair,3.74,FN,,,,
+env2,pose2,00600,box,box,1.4,FN,,,,
+env2,pose2,00600,bottle,bottle,0.94,TP_correct_class,bottle,0.571,0.885,fused
+env2,pose2,00600,trash bin,trash bin,1.32,TP_wrong_class,potted plant,0.333,0.927,fused
+env2,pose2,00600,chair1,chair,1.75,FN,,,,
+env2,pose2,00600,chair2,chair,3.74,FN,,,,
+env2,pose3,00100,box,box,1.6,TP_wrong_class,microwave,0.252,0.949,fused
+env2,pose3,00100,bottle,bottle,0.95,FN,,,,
+env2,pose3,00100,trash bin,trash bin,0.77,FN,,,,
+env2,pose3,00100,chair1,chair,1.42,TP_correct_class,chair,0.885,0.902,fused
+env2,pose3,00100,chair2,chair,3.61,FN,,,,
+env2,pose3,00100,potted plant,potted plant,7.38,FN,,,,
+env2,pose3,00200,box,box,1.6,TP_wrong_class,microwave,0.252,0.935,fused
+env2,pose3,00200,bottle,bottle,0.95,FN,,,,
+env2,pose3,00200,trash bin,trash bin,0.77,FN,,,,
+env2,pose3,00200,chair1,chair,1.42,TP_correct_class,chair,0.863,0.838,fused
+env2,pose3,00200,chair2,chair,3.61,TP_correct_class,chair,0.252,0.858,fused
+env2,pose3,00200,potted plant,potted plant,7.38,FN,,,,
+env2,pose3,00300,box,box,1.6,FN,,,,
+env2,pose3,00300,bottle,bottle,0.95,FN,,,,
+env2,pose3,00300,trash bin,trash bin,0.77,FN,,,,
+env2,pose3,00300,chair1,chair,1.42,TP_correct_class,chair,0.764,0.971,fused
+env2,pose3,00300,chair2,chair,3.61,FN,,,,
+env2,pose3,00300,potted plant,potted plant,7.38,FN,,,,
+env2,pose3,00400,box,box,1.6,TP_wrong_class,microwave,0.267,0.943,fused
+env2,pose3,00400,bottle,bottle,0.95,FN,,,,
+env2,pose3,00400,trash bin,trash bin,0.77,FN,,,,
+env2,pose3,00400,chair1,chair,1.42,TP_correct_class,chair,0.865,0.888,fused
+env2,pose3,00400,chair2,chair,3.61,TP_correct_class,chair,0.28,0.788,fused
+env2,pose3,00400,potted plant,potted plant,7.38,FN,,,,
+env2,pose3,00500,box,box,1.6,FN,,,,
+env2,pose3,00500,bottle,bottle,0.95,FN,,,,
+env2,pose3,00500,trash bin,trash bin,0.77,FN,,,,
+env2,pose3,00500,chair1,chair,1.42,TP_correct_class,chair,0.685,0.89,fused
+env2,pose3,00500,chair2,chair,3.61,FN,,,,
+env2,pose3,00500,potted plant,potted plant,7.38,FN,,,,
+env2,pose3,00600,box,box,1.6,FN,,,,
+env2,pose3,00600,bottle,bottle,0.95,FN,,,,
+env2,pose3,00600,trash bin,trash bin,0.77,FN,,,,
+env2,pose3,00600,chair1,chair,1.42,TP_correct_class,chair,0.844,0.924,fused
+env2,pose3,00600,chair2,chair,3.61,FN,,,,
+env2,pose3,00600,potted plant,potted plant,7.38,FN,,,,

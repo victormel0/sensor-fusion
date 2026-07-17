@@ -1,0 +1,36 @@
+env,arm,gt_class,gt_range,det_range,signed_err,abs_err,source
+unknown,fused,bottle,1.18,1.387,0.207,0.207,fused
+unknown,fused,chair,3.8,4.412,0.612,0.612,fused
+unknown,fused,trash bin,2.93,3.066,0.136,0.136,fused
+unknown,fused,tv,5.91,5.989,0.079,0.079,fused
+unknown,fused,potted plant,2.65,2.778,0.128,0.128,fused
+unknown,fused,potted plant,7.83,2.218,-5.612,5.612,fused
+unknown,fused,chair,1.79,2.095,0.305,0.305,fused
+unknown,fused,bottle,1.18,1.391,0.211,0.211,fused
+unknown,fused,trash bin,2.93,3.064,0.134,0.134,fused
+unknown,fused,chair,3.8,4.413,0.613,0.613,fused
+unknown,fused,tv,5.91,5.989,0.079,0.079,fused
+unknown,fused,potted plant,2.65,2.781,0.131,0.131,fused
+unknown,fused,potted plant,7.83,2.214,-5.616,5.616,fused
+unknown,fused,chair,1.79,2.095,0.305,0.305,fused
+unknown,fused,bottle,1.18,1.389,0.209,0.209,fused
+unknown,fused,chair,3.8,4.41,0.61,0.61,fused
+unknown,fused,potted plant,7.83,2.216,-5.614,5.614,fused
+unknown,fused,trash bin,2.93,3.067,0.137,0.137,fused
+unknown,fused,tv,5.91,5.987,0.077,0.077,fused
+unknown,fused,potted plant,2.65,2.776,0.126,0.126,fused
+unknown,fused,chair,1.79,2.091,0.301,0.301,fused
+unknown,fused,bottle,1.18,1.395,0.215,0.215,fused
+unknown,fused,chair,3.8,4.413,0.613,0.613,fused
+unknown,fused,trash bin,2.93,3.071,0.141,0.141,fused
+unknown,fused,potted plant,7.83,2.215,-5.615,5.615,fused
+unknown,fused,tv,5.91,5.987,0.077,0.077,fused
+unknown,fused,potted plant,2.65,2.784,0.134,0.134,fused
+unknown,fused,chair,1.79,2.099,0.309,0.309,fused
+unknown,fused,chair,3.8,4.406,0.606,0.606,fused
+unknown,fused,bottle,1.18,1.386,0.206,0.206,fused
+unknown,fused,potted plant,7.83,2.214,-5.616,5.616,fused
+unknown,fused,trash bin,2.93,3.067,0.137,0.137,fused
+unknown,fused,tv,5.91,5.987,0.077,0.077,fused
+unknown,fused,potted plant,2.65,2.778,0.128,0.128,fused
+unknown,fused,chair,1.79,2.095,0.305,0.305,fused

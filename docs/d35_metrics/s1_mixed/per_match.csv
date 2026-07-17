@@ -1,0 +1,16 @@
+env,arm,gt_class,gt_range,det_range,signed_err,abs_err,source
+unknown,fused,tv,2.49,2.758,0.268,0.268,fused
+unknown,fused,chair,1.66,2.139,0.479,0.479,fused
+unknown,fused,keyboard,1.51,1.607,0.097,0.097,fused
+unknown,fused,tv,2.49,2.759,0.269,0.269,fused
+unknown,fused,chair,1.66,2.138,0.478,0.478,fused
+unknown,fused,keyboard,1.51,1.609,0.099,0.099,fused
+unknown,fused,tv,2.49,2.758,0.268,0.268,fused
+unknown,fused,chair,1.66,2.138,0.478,0.478,fused
+unknown,fused,keyboard,1.51,1.611,0.101,0.101,fused
+unknown,fused,tv,2.49,2.757,0.267,0.267,fused
+unknown,fused,chair,1.66,2.138,0.478,0.478,fused
+unknown,fused,keyboard,1.51,1.616,0.106,0.106,fused
+unknown,fused,tv,2.49,2.758,0.268,0.268,fused
+unknown,fused,chair,1.66,2.139,0.479,0.479,fused
+unknown,fused,keyboard,1.51,1.62,0.11,0.11,fused

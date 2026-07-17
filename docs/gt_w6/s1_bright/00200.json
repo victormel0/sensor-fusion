@@ -1,0 +1,83 @@
+{
+  "frame": "00200",
+  "image": "00200.png",
+  "image_size": [
+    960,
+    600
+  ],
+  "created": "2026-07-06T17:36:18",
+  "objects": [
+    {
+      "class": "box",
+      "bbox_2d": [
+        440,
+        377,
+        511,
+        454
+      ],
+      "range_m_tape": 2.01,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "laptop",
+      "bbox_2d": [
+        210,
+        251,
+        330,
+        318
+      ],
+      "range_m_tape": 1.61,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "cup",
+      "bbox_2d": [
+        105,
+        286,
+        152,
+        321
+      ],
+      "range_m_tape": 1.49,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "keyboard",
+      "bbox_2d": [
+        368,
+        305,
+        466,
+        317
+      ],
+      "range_m_tape": 1.51,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "tv",
+      "bbox_2d": [
+        355,
+        82,
+        581,
+        262
+      ],
+      "range_m_tape": 2.49,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "chair",
+      "bbox_2d": [
+        621,
+        268,
+        766,
+        530
+      ],
+      "range_m_tape": 1.66,
+      "occluded": false,
+      "notes": "bag on seat"
+    }
+  ]
+}

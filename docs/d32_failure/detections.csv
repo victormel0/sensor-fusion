@@ -1,0 +1,77 @@
+env,pose,frame,pred_class,pred_conf,det_source,bucket,sub_bucket,matched_gt,max_iou_assessable,max_iou_occluded
+env1,-,00100,chair,0.943,fused,TP,,chair,0.95,
+env1,-,00100,tv,0.844,fused,TP,,left monitor,0.937,
+env1,-,00100,tv,0.828,fused,TP,,right monitor,0.933,
+env1,-,00100,tv,0.68,fused,FP,partial_overlap_below_iou,,0.042,0.0
+env1,-,00100,chair,0.622,fused,FP,duplicate_detection,,0.821,0.0
+env1,-,00100,laptop,0.535,fused,FP,partial_overlap_below_iou,,0.0,0.0
+env1,-,00100,tv,0.404,fused,FP,partial_overlap_below_iou,,0.011,0.0
+env1,-,00100,laptop,0.343,fused,FP,partial_overlap_below_iou,,0.015,0.0
+env1,-,00100,keyboard,0.337,fused,FP,no_gt_overlap,,0.0,0.0
+env1,-,00100,person,0.319,fused,TP,,person-in-chair,0.846,
+env1,-,00100,tv,0.255,fused,FP,partial_overlap_below_iou,,0.012,0.0
+env1,-,00300,chair,0.948,fused,TP,,chair,0.944,
+env1,-,00300,tv,0.815,fused,TP,,left monitor,0.977,
+env1,-,00300,tv,0.702,fused,TP,,right monitor,0.96,
+env1,-,00300,tv,0.698,fused,FP,partial_overlap_below_iou,,0.038,0.0
+env1,-,00300,person,0.549,fused,TP,,person-in-chair,0.857,
+env1,-,00300,chair,0.515,fused,FP,duplicate_detection,,0.819,0.0
+env1,-,00300,laptop,0.469,fused,FP,no_gt_overlap,,0.0,0.0
+env1,-,00300,tv,0.365,fused,FP,partial_overlap_below_iou,,0.034,0.0
+env1,-,00300,tv,0.321,fused,FP,partial_overlap_below_iou,,0.004,0.0
+env1,-,00300,laptop,0.305,fused,FP,partial_overlap_below_iou,,0.036,0.0
+env1,-,00500,chair,0.941,fused,TP,,chair,0.959,
+env1,-,00500,tv,0.83,fused,TP,,left monitor,0.942,
+env1,-,00500,tv,0.791,fused,TP,,right monitor,0.946,
+env1,-,00500,tv,0.774,fused,FP,partial_overlap_below_iou,,0.043,0.0
+env1,-,00500,tv,0.428,fused,FP,partial_overlap_below_iou,,0.016,0.0
+env1,-,00500,chair,0.387,fused,FP,duplicate_detection,,0.844,0.0
+env1,-,00500,keyboard,0.372,fused,FP,partial_overlap_below_iou,,0.013,0.0
+env1,-,00500,laptop,0.327,fused,FP,no_gt_overlap,,0.0,0.0
+env1,-,00500,tv,0.31,fused,FP,partial_overlap_below_iou,,0.009,0.0
+env1,-,00500,person,0.282,fused,TP,,person-in-chair,0.854,
+env2,pose1,00100,chair,0.656,fused,TP,,chair1,0.903,
+env2,pose1,00100,potted plant,0.468,fused,TP,,potted plant,0.526,
+env2,pose1,00200,chair,0.582,fused,TP,,chair1,0.894,
+env2,pose1,00200,potted plant,0.402,fused,TP,,potted plant,0.53,
+env2,pose1,00200,remote,0.375,fused,FP,no_gt_overlap,,0.0,0.0
+env2,pose1,00200,bottle,0.309,fused,FP,no_gt_overlap,,0.0,0.0
+env2,pose1,00300,chair,0.59,fused,TP,,chair1,0.927,
+env2,pose1,00300,potted plant,0.382,fused,TP,,potted plant,0.529,
+env2,pose1,00300,remote,0.38,fused,FP,no_gt_overlap,,0.0,0.0
+env2,pose1,00400,chair,0.625,fused,TP,,chair1,0.867,
+env2,pose1,00400,potted plant,0.458,fused,TP,,potted plant,0.525,
+env2,pose1,00400,microwave,0.31,fused,FP,no_gt_overlap,,0.0,0.0
+env2,pose1,00400,bottle,0.297,fused,FP,no_gt_overlap,,0.0,0.0
+env2,pose1,00400,remote,0.259,fused,FP,no_gt_overlap,,0.0,0.0
+env2,pose1,00500,chair,0.684,fused,TP,,chair1,0.805,
+env2,pose1,00500,potted plant,0.502,fused,TP,,potted plant,0.549,
+env2,pose1,00500,remote,0.293,fused,FP,no_gt_overlap,,0.0,0.0
+env2,pose1,00500,bottle,0.278,fused,FP,no_gt_overlap,,0.0,0.0
+env2,pose2,00100,bottle,0.547,fused,TP,,bottle,0.795,
+env2,pose2,00200,bottle,0.564,fused,TP,,bottle,0.782,
+env2,pose2,00300,bottle,0.479,fused,TP,,bottle,0.882,
+env2,pose2,00400,bottle,0.547,fused,TP,,bottle,0.794,
+env2,pose2,00400,potted plant,0.458,fused,TP,,trash bin,0.859,
+env2,pose2,00500,bottle,0.545,fused,TP,,bottle,0.785,
+env2,pose2,00600,bottle,0.571,fused,TP,,bottle,0.885,
+env2,pose2,00600,potted plant,0.333,fused,TP,,trash bin,0.927,
+env2,pose3,00100,chair,0.885,fused,TP,,chair1,0.902,
+env2,pose3,00100,potted plant,0.536,fused,FP,partial_overlap_below_iou,,0.449,0.0
+env2,pose3,00100,microwave,0.252,fused,TP,,box,0.949,
+env2,pose3,00200,chair,0.863,fused,TP,,chair1,0.838,
+env2,pose3,00200,potted plant,0.536,fused,FP,partial_overlap_below_iou,,0.481,0.0
+env2,pose3,00200,toilet,0.302,fused,FP,no_gt_overlap,,0.0,0.0
+env2,pose3,00200,chair,0.252,fused,TP,,chair2,0.858,
+env2,pose3,00200,microwave,0.252,fused,TP,,box,0.935,
+env2,pose3,00300,chair,0.764,fused,TP,,chair1,0.971,
+env2,pose3,00300,potted plant,0.545,fused,FP,partial_overlap_below_iou,,0.396,0.0
+env2,pose3,00400,chair,0.865,fused,TP,,chair1,0.888,
+env2,pose3,00400,potted plant,0.52,fused,FP,partial_overlap_below_iou,,0.472,0.0
+env2,pose3,00400,chair,0.28,fused,TP,,chair2,0.788,
+env2,pose3,00400,microwave,0.267,fused,TP,,box,0.943,
+env2,pose3,00500,chair,0.685,fused,TP,,chair1,0.89,
+env2,pose3,00500,potted plant,0.537,fused,FP,partial_overlap_below_iou,,0.415,0.0
+env2,pose3,00600,chair,0.844,fused,TP,,chair1,0.924,
+env2,pose3,00600,potted plant,0.518,fused,FP,partial_overlap_below_iou,,0.4,0.0
+env2,pose3,00600,toilet,0.294,fused,FP,no_gt_overlap,,0.0,0.0

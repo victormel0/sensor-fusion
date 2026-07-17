@@ -1,0 +1,107 @@
+{
+  "frame": "00200",
+  "image": "00200.png",
+  "image_size": [
+    960,
+    600
+  ],
+  "created": "2026-07-06T17:42:03",
+  "objects": [
+    {
+      "class": "bottle",
+      "bbox_2d": [
+        277,
+        481,
+        315,
+        585
+      ],
+      "range_m_tape": 1.18,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "box",
+      "bbox_2d": [
+        572,
+        372,
+        651,
+        464
+      ],
+      "range_m_tape": 1.76,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "chair",
+      "bbox_2d": [
+        422,
+        273,
+        516,
+        451
+      ],
+      "range_m_tape": 1.79,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "potted plant",
+      "bbox_2d": [
+        796,
+        232,
+        876,
+        365
+      ],
+      "range_m_tape": 2.65,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "trash bin",
+      "bbox_2d": [
+        677,
+        355,
+        727,
+        408
+      ],
+      "range_m_tape": 2.93,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "chair",
+      "bbox_2d": [
+        193,
+        269,
+        275,
+        386
+      ],
+      "range_m_tape": 3.8,
+      "occluded": false,
+      "notes": "bag on seat"
+    },
+    {
+      "class": "tv",
+      "bbox_2d": [
+        449,
+        197,
+        562,
+        265
+      ],
+      "range_m_tape": 5.91,
+      "occluded": false,
+      "notes": ""
+    },
+    {
+      "class": "potted plant",
+      "bbox_2d": [
+        355,
+        248,
+        393,
+        327
+      ],
+      "range_m_tape": 7.83,
+      "occluded": false,
+      "notes": "slightly occluded by a table edge"
+    }
+  ]
+}

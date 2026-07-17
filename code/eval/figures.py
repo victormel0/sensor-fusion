@@ -7,12 +7,15 @@ Run in venv_yolo (needs matplotlib; pip install matplotlib --break-system-packag
   cd ~/Documents/workspace/sensor-fusion
   source venv_yolo/bin/activate
   python3 code/eval/figures.py --metrics docs/d26_metrics --out docs/screenshots
+  python3 code/eval/figures.py --metrics docs/d35_metrics/s1_bright --out docs/screenshots --prefix d35_s1_bright
 
-Reads docs/d26_metrics/{per_match.csv, presence_table.md, fused_rate_table.md} and writes:
-  d26_fig_range_scatter.png   (GT range vs detected range, 1:1 line, per arm)
-  d26_fig_presence_bars.png   (recall/precision/class per env+arm)
-  d26_fig_fused_rate.png      (fused vs camera_only-by-reason, per env)
-Qualitative overlay panels (d26_fig_qual_*.png) are made by hand from the overlay tool, not here.
+Reads {per_match.csv, presence_table.md, fused_rate_table.md} from --metrics and writes (stem set by
+--prefix, default "d26"):
+  <prefix>_fig_range_scatter.png   (GT range vs detected range, 1:1 line, per arm)
+  <prefix>_fig_presence_bars.png   (recall/precision/class per env+arm)
+  <prefix>_fig_fused_rate.png      (fused vs camera_only-by-reason, per env)
+With no --prefix the names are d26_fig_*.png (unchanged). Qualitative overlay panels
+(<prefix>_fig_qual_*.png) are made by hand from the overlay tool, not here.
 
 Each figure is skipped (with a message) if its input is missing, so a partial run still produces what it can.
 """
@@ -32,6 +35,9 @@ def parse_args():
     ap = argparse.ArgumentParser()
     ap.add_argument("--metrics", required=True, help="docs/d26_metrics")
     ap.add_argument("--out", required=True, help="docs/screenshots")
+    ap.add_argument("--prefix", default="d26",
+                    help="filename stem before '_fig_' (default 'd26' -> d26_fig_*.png; "
+                         "e.g. --prefix d35_s1_bright -> d35_s1_bright_fig_*.png)")
     return ap.parse_args()
 #endregion
 
@@ -57,7 +63,7 @@ def read_md_table(path):
 #endregion
 
 #region [Range scatter]
-def fig_range_scatter(metrics_dir, out_dir):
+def fig_range_scatter(metrics_dir, out_dir, prefix):
     csv_path = os.path.join(metrics_dir, "per_match.csv")
     if not os.path.isfile(csv_path):
         print("[scatter] skip: no per_match.csv")
@@ -93,7 +99,7 @@ def fig_range_scatter(metrics_dir, out_dir):
                plt.Line2D([], [], ls="--", color="k", label="1:1")]
     ax.legend(handles=handles, fontsize=8, loc="upper left")
     ax.grid(True, alpha=0.3)
-    p = os.path.join(out_dir, "d26_fig_range_scatter.png")
+    p = os.path.join(out_dir, f"{prefix}_fig_range_scatter.png")
     fig.tight_layout()
     fig.savefig(p, dpi=150)
     plt.close(fig)
@@ -101,7 +107,7 @@ def fig_range_scatter(metrics_dir, out_dir):
 #endregion
 
 #region [Presence bars]
-def fig_presence(metrics_dir, out_dir):
+def fig_presence(metrics_dir, out_dir, prefix):
     rows = read_md_table(os.path.join(metrics_dir, "presence_table.md"))
     if not rows:
         print("[presence] skip: no presence_table.md")
@@ -130,7 +136,7 @@ def fig_presence(metrics_dir, out_dir):
     ax.set_title("Presence: recall / precision / class-correctness")
     ax.legend(fontsize=8)
     ax.grid(True, axis="y", alpha=0.3)
-    p = os.path.join(out_dir, "d26_fig_presence_bars.png")
+    p = os.path.join(out_dir, f"{prefix}_fig_presence_bars.png")
     fig.tight_layout()
     fig.savefig(p, dpi=150)
     plt.close(fig)
@@ -138,7 +144,7 @@ def fig_presence(metrics_dir, out_dir):
 #endregion
 
 #region [Fused-rate stacked bars]
-def fig_fused_rate(metrics_dir, out_dir):
+def fig_fused_rate(metrics_dir, out_dir, prefix):
     rows = read_md_table(os.path.join(metrics_dir, "fused_rate_table.md"))
     if not rows:
         print("[fused_rate] skip: no fused_rate_table.md")
@@ -168,7 +174,7 @@ def fig_fused_rate(metrics_dir, out_dir):
     ax.set_title("Fused-rate: boxes that earned a LiDAR range", fontsize=11)
     ax.legend(fontsize=8, loc="upper left")
     ax.grid(True, axis="y", alpha=0.3)
-    p = os.path.join(out_dir, "d26_fig_fused_rate.png")
+    p = os.path.join(out_dir, f"{prefix}_fig_fused_rate.png")
     fig.tight_layout()
     fig.savefig(p, dpi=150)
     plt.close(fig)
@@ -179,9 +185,9 @@ def fig_fused_rate(metrics_dir, out_dir):
 def main():
     args = parse_args()
     os.makedirs(args.out, exist_ok=True)
-    fig_range_scatter(args.metrics, args.out)
-    fig_presence(args.metrics, args.out)
-    fig_fused_rate(args.metrics, args.out)
+    fig_range_scatter(args.metrics, args.out, args.prefix)
+    fig_presence(args.metrics, args.out, args.prefix)
+    fig_fused_rate(args.metrics, args.out, args.prefix)
     print("figures.py done.")
 #endregion
 

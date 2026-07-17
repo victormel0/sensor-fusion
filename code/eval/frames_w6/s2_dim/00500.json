@@ -1,0 +1,8 @@
+{
+  "frame": "00500",
+  "lidar_stamp_ns": 1783180179081432819,
+  "image_stamp_ns": 1783180179088354000,
+  "dt_ms": 6.921,
+  "within_slop": true,
+  "n_points": null
+}
